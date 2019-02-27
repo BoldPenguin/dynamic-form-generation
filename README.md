@@ -4,7 +4,7 @@ This code exercise is intended to evaluate your software engineering skills but 
 
 # The Dynamic Form Generatoin Problem
 
-One of the problems Bold Penguin helps solve is matching business owners who are searching for a policy with an agent and carrier can provide and bind a policy.
+One of the problems Bold Penguin helps solve is matching business owners who are searching for a policy with an agent and carrier who can provide a policy.
 
 To this end, Bold Penguin writes software that asks questions about the business to be insured so to determine an agent/carrier match for the particular business/owner.
 
@@ -24,14 +24,40 @@ You'll need to setup your development environment with Javascript and Angular. T
 
 **After completing each of the steps below, commit your changes to your local clone with a meaningful commit message.**
 
-1. Create a new angular project and set up an injectible service that will be responsible for retrieving the question set data from: 
+1. Set up an injectible service that will be responsible for retrieving the question set data from: 
 ```bash
-!!!!<insert endpoint here> & any other info needed to access it successfully
+https://5u9pljo9pc.execute-api.us-east-1.amazonaws.com/dev/api/questions
 ```
-2. Install the Angular Material Module 
+All endpoints require an Authorization header with the md5 hash fingerprint value of your personal email as the value.
 
+2. Install the Angular Material Module
 
+```bash
+https://material.angular.io/guide/getting-started
+```
 
+3. Make a form using Angular Material Form Controls to ask the user for inputs based on the the question set data you fetched in step one.
+
+4. Configure your service to post back the form responses to
+```bash
+https://5u9pljo9pc.execute-api.us-east-1.amazonaws.com/dev/api/application_forms
+```
+with a request body JSON object that has an array of answers objects, each with an id, and response:
+
+```bash
+{
+	"answers": [
+		{"id":1,
+		"response": "<response1>"},
+		{"id":2,
+		"response": "<response2>"},
+		{"id":1,
+		"response": "<response3>"}...
+	]
+}
+```
+
+5. Implement Search....
 
 
 
