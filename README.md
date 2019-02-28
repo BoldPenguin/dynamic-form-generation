@@ -62,11 +62,7 @@ For example, if your email was `Frank@boldpenguin.com`, you would generate the m
 
 **After completing each of the steps below, commit your changes to your local clone with a meaningful commit message.**
 
-1. Set up an injectible service that will be responsible for retrieving the question set data from: 
-```bash
-https://5u9pljo9pc.execute-api.us-east-1.amazonaws.com/dev/api/questions
-```
-All endpoints require an Authorization header with the md5 hash fingerprint value of your personal email as the value.
+1. Set up an injectible service that will be responsible for managing api calls, and make a method that retrieves the questions from the questions api. 
 
 2. Install the Angular Material Module
 
@@ -74,28 +70,13 @@ All endpoints require an Authorization header with the md5 hash fingerprint valu
 https://material.angular.io/guide/getting-started
 ```
 
-3. Make a form using Angular Material Form Controls to ask the user for inputs based on the the question set data you fetched in step one.
+3. Using Angular Material Form Controls, make a form component that consumes a list of questions from the questions api and dynamically generates a form based on that data.
 
-4. Configure your service to post back the form responses to
-```bash
-https://5u9pljo9pc.execute-api.us-east-1.amazonaws.com/dev/api/application_forms
-```
-with a request body JSON object that has an array of answers objects, each with an id, and response:
+4. Using the search api, add NAICS search functionality to questions of <propertyName>:<valueName> (!!!or some property in the question data model they can trigger this functionality off of).
 
-```bash
-{
-	"answers": [
-		{"id":1,
-		"response": "<response1>"},
-		{"id":2,
-		"response": "<response2>"},
-		{"id":1,
-		"response": "<response3>"}...
-	]
-}
-```
+4. Add the ability to submit user answers to the application forms endpoint
 
-5. Implement Search....
+5. Write tests...
 
 
 
