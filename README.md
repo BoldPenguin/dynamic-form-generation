@@ -1,6 +1,6 @@
 # A little background information
 
-This code exercise is intended to evaluate your software engineering skills but also give you an introduction into the types of problems we solve at Bold Penguin. Your solution will be evaluated based on the ability to produce intended results, cleanliness, adherence to best practices, maintainability, and readability. You should write code like you would if this were an actual assignment. You do not need to gold plate your solution, but we are looking for something more than a script.  Ideally your solution would demonstrate your understand of object-oriented principles and best practices.
+This code exercise is intended to evaluate your software engineering skills but also give you an introduction into the types of problems we solve at Bold Penguin. Your solution will be evaluated based on the ability to produce intended results, cleanliness, adherence to best practices, maintainability, and readability. You should write code like you would if this were an actual assignment. You do not need to gold plate your solution, but we are looking for something more than a script.  Ideally your solution would demonstrate your understand of object-oriented principles and best practices (don't forget your tests!).
 
 # The Dynamic Form Generation Problem
 
@@ -70,13 +70,39 @@ For example, if your email was `Frank@boldpenguin.com`, you would generate the m
 https://material.angular.io/guide/getting-started
 ```
 
-3. Using Angular Material Form Controls, make a form component that consumes a list of questions from the questions api and dynamically generates a form based on that data.
+3. Using Angular Material Form Controls, make a form component that consumes a list of questions from the questions api and dynamically generates a form based on that data.  This dynamic form should be able to accomodate N questions in whatever order they are configured in the data.
 
 4. Using the search api, add NAICS search functionality to questions of <propertyName>:<valueName> (!!!or some property in the question data model they can trigger this functionality off of).
 
 4. Add the ability to submit user answers to the application forms endpoint
 
-5. Write tests...
+5. Complete the questions in `QUESTIONS.md`.
+
+## How this will be evaluated
+
+For clarity, this is how your code sample will be evaluated:
+
+| Criteria | Percentage |
+|----------|-----|
+| Object-Oriented Design Principles | 30% |
+| Readabiltiy & Maintainability | 30% |
+| Best Practices & Naming Convention | 20% |
+| Ease of Testing Solution & Correctness | 20% |
+
+## Submission guideliness
+
+**Please don't push your work to a public fork on GitHub!**
+
+Using the command below, create a git bundle of your changes and send it to frank@boldpenguin.com with the subject line `[DYNAMIC_FORM] <your name>`.
+
+```bash
+$ git bundle create your_name.bundle master
+```
+
+<br/>
+<br/>
+<br/>
+
 
 
 
