@@ -60,6 +60,10 @@ For example, if your email was `Frank@boldpenguin.com`, you would generate the m
 
 ## Your Assignment
 
+You are going to build a dynamically generated user input form. In addition to this wireframe, please see the requirements below.
+
+![dynamic-form-wireframe.png](dynamic-form-wireframe.png)
+
 **After completing each of the steps below, commit your changes to your local clone with a meaningful commit message.**
 
 1. Set up an injectible service that will be responsible for managing api calls, and make a method that retrieves the questions from the questions api. 
