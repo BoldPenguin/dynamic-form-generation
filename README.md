@@ -45,7 +45,23 @@ This endpoint filters NAICS (North American Industry Classification System) for 
 $ curl -XGET https://pengwinning.boldpenguin.com/api/naics/search?q=te -H 'Authorization: Bearer xxxxxxxx'
 ```
 
-### POST https://pengwinning.boldpenguin.com/api/questions
+### POST https://pengwinning.boldpenguin.com/api/application_forms
+
+This endpoint saves an application form (which is essentially the answers to the questions described in the `api/questions` endpint.
+
+```bash
+$ curl -XPOST https://pengwinning.boldpenguin.com/api/application_forms -H 'Authorization: Bearer xxxxxxxx'
+```
+
+## Authentication
+
+Like most modern web application, we use stateless authentication. In order to authenticate successfully, you'll need to supply a request header with the bearer scheme. To generate your Authorization header:
+
+1. Trim leading and trailing whitespace from your email address
+2. Force all characters to lower-case
+3. md5 hash the final string
+
+For example, if your email was `Frank@boldpenguin.com`, you would generate the md5 hash of `frank@boldpenguin.com` which is `5475eb1890f635deca00c57d127f30bd`
 
 
 
