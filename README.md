@@ -14,10 +14,6 @@ The goal is to provide a path that provides a user experience short in duration 
 
 Clone **this** repo, please don't make a fork of it.
 
-```bash
-$ git clone <REPO URL HERE>
-```
-
 You'll need to setup your development environment with Javascript and Angular. This step is platform dependent, so you'll need to figure it out yourself.
 
 ## Your Assignment
@@ -25,11 +21,31 @@ You'll need to setup your development environment with Javascript and Angular. T
 **After completing each of the steps below, commit your changes to your local clone with a meaningful commit message.**
 
 1. Create a new angular project and set up an injectible service that will be responsible for retrieving the question set data from: 
-```bash
-!!!!<insert endpoint here> & any other info needed to access it successfully
-```
+
 2. Install the Angular Material Module 
 
+
+## The API
+
+Another team is working on a series of API endpoints to generate a dynamic form. The form is intended to collect data from a small business owner about their business. There are a few endpoints that you will need to use for this assignment:
+
+### GET https://pengwinning.boldpenguin.com/api/questions
+
+This retrieves a list of questions that the consumer must answer. The questions have some indication of the types of HTML elements that are to be used.
+
+```bash
+$ curl -XGET https://pengwinning.boldpenguin.com/api/questions -H 'Authorization: Bearer xxxxxxxx'
+```
+
+### GET https://pengwinning.boldpenguin.com/api/naics/search?q=XXX
+
+This endpoint filters NAICS (North American Industry Classification System) for industry classification codes that match the query string (e.g. the q parameter).
+
+```bash
+$ curl -XGET https://pengwinning.boldpenguin.com/api/naics/search?q=te -H 'Authorization: Bearer xxxxxxxx'
+```
+
+### POST https://pengwinning.boldpenguin.com/api/questions
 
 
 
