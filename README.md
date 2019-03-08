@@ -41,10 +41,12 @@ $ curl -XGET https://pengwinning.boldpenguin.com/api/naics/search?q=te -H 'Autho
 This endpoint saves an application form (which is essentially the answers to the questions described in the `api/questions` endpint.
 
 ```bash
-$ curl -XPOST https://pengwinning.boldpenguin.com/api/application_forms -H 'Authorization: Bearer xxxxxxxx'
+$ curl -XPOST https://pengwinning.boldpenguin.com/api/application_forms \
+  -H 'Authorization: Bearer xxxxxxxx' \
+  -H 'Content-Type: application/json' \
+  --data '{"responses":[{"question_id":1,"text":"John"},{"question_id":2,"text":"Doe"},{"question_id":3,"option_id":1},{"question_id":4,"text":"123433"}]}'
 ```
 
-TODO: Supply a sample request payload
 
 ## Authentication
 
@@ -66,21 +68,15 @@ You are going to build a dynamically generated user input form. In addition to t
 
 **After completing each of the steps below, commit your changes to your local clone with a meaningful commit message.**
 
-1. Set up an injectible service that will be responsible for managing api calls, and make a method that retrieves the questions from the questions api. 
+Notice that an injectible service has been created for you, and Angular Material has been added as a dependency. Using these components, please complete the tasks below.
 
-2. Install the Angular Material Module
+1. Using Angular Material Form Controls, make a form component that consumes a list of questions from the questions api and dynamically generates a form based on that data.  This dynamic form should be able to accomodate N questions in whatever order they are configured in the data.
 
-```bash
-https://material.angular.io/guide/getting-started
-```
+2. Using the search api, add NAICS search functionality to questions of <propertyName>:<valueName> (!!!or some property in the question data model they can trigger this functionality off of).
 
-3. Using Angular Material Form Controls, make a form component that consumes a list of questions from the questions api and dynamically generates a form based on that data.  This dynamic form should be able to accomodate N questions in whatever order they are configured in the data.
+3. Add the ability to submit user answers to the application forms endpoint
 
-4. Using the search api, add NAICS search functionality to questions of <propertyName>:<valueName> (!!!or some property in the question data model they can trigger this functionality off of).
-
-4. Add the ability to submit user answers to the application forms endpoint
-
-5. Complete the questions in `QUESTIONS.md`.
+4. Complete the questions in `QUESTIONS.md`.
 
 ## How this will be evaluated
 
