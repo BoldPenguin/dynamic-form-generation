@@ -72,7 +72,7 @@ Notice that an injectible service has been created for you, and Angular Material
 
 1. Using Angular Material Form Controls, make a form component that consumes a list of questions from the questions api and dynamically generates a form based on that data.  This dynamic form should be able to accomodate N questions in whatever order they are configured in the data.
 
-2. Using the search api, add NAICS search functionality to questions of <propertyName>:<valueName> (!!!or some property in the question data model they can trigger this functionality off of).
+2. Using the search api, add NAICS search functionality to the classification code question.
 
 3. Add the ability to submit user answers to the application forms endpoint
 
