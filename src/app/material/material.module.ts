@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
-import { MatButtonModule, MatRadioButton } from '@angular/material';
+import { MatButtonModule, MatRadioButton, MatInputModule, MatFormField } from '@angular/material';
 
+const materialModules = [
+  MatButtonModule,
+  MatInputModule
+];
 @NgModule({
-  declarations: [MatButtonModule, MatRadioButton],
-  imports: [MatButtonModule, MatRadioButton]
+  imports: materialModules,
+  exports: materialModules
 })
+
 export class MaterialModule { }
