@@ -93,7 +93,7 @@ For clarity, this is how your code sample will be evaluated:
 
 **Please don't push your work to a public fork on GitHub!**
 
-Using the command below, create a git bundle of your changes and send it to `talent@boldpenguin.com` with the subject line `[DYNAMIC_FORM] <your name>`. **This subject line is VERY important! Without using it exactly, there may be delays in scheduling next steps**
+Using the command below, create a git bundle of your changes and send it to `front-end-code-test@boldpenguin.com` with the subject line `[DYNAMIC_FORM] <your name>`. **This subject line is VERY important! Without using it exactly, there may be delays in scheduling next steps**
 
 Also, if you are using an external recruiter, please CC them on the submission so that they can see it too!
 
