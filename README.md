@@ -50,15 +50,7 @@ $ curl -XPOST https://pengwinning.boldpenguin.com/api/application_forms \
 
 ## Authentication
 
-Like most modern web application, we use stateless authentication. In order to authenticate successfully, you'll need to supply a request header with the bearer scheme. To generate your authorization header:
-
-1. Trim leading and trailing whitespace from your email address
-2. Force all characters to lower-case
-3. md5 hash the final string
-
-For example, if your email was `Frank@boldpenguin.com`, you would generate the md5 hash of `frank@boldpenguin.com` which is `5475eb1890f635deca00c57d127f30bd`. You will then supply this value via the Authorization header of an HTTP request, like so:
-
-`Authorization: Bearer 5475eb1890f635deca00c57d127f30bd`
+Like most modern web application, we use stateless authentication. In order to authenticate successfully, you'll need to supply a request header with the bearer scheme. The bearer token has been given to you on the api service.
 
 ## Your Assignment
 
