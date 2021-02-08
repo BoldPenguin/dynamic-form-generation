@@ -50,7 +50,7 @@ $ curl -XPOST https://pengwinning.boldpenguin.com/api/application_forms \
 
 ## Authentication
 
-Like most modern web application, we use stateless authentication. In order to authenticate successfully, you'll need to supply a request header with the bearer scheme. The bearer token has been given to you on the api service.
+Like many modern web application, we use stateless authentication. In order to authenticate successfully, you'll need to supply a request header with the bearer scheme. The bearer token has been given to you on the api service.
 
 ## Your Assignment
 
