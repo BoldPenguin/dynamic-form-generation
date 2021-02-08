@@ -1,4 +1,5 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
+import { ApiService } from './api.service';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -6,6 +7,12 @@ describe('AppComponent', () => {
     waitForAsync(() => {
       TestBed.configureTestingModule({
         declarations: [AppComponent],
+        providers: [
+          {
+            provide: ApiService,
+            useValue: { getQuestions: jest.fn(() => ({ subscribe: jest.fn })) },
+          },
+        ],
       }).compileComponents();
     }),
   );
@@ -14,20 +21,5 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'dynamic-form-generation'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('dynamic-form-generation');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to dynamic-form-generation!',
-    );
   });
 });
